@@ -548,9 +548,9 @@ def _reconstruct_text(row: pd.Series, symptom_cols: List[str], department: str) 
 def load_raw_data(excel_path: Path = RAW_EXCEL_PATH) -> pd.DataFrame:
     possible_paths = [
         excel_path,
-        Path("SANIA@20.xlsx"),
-        Path("../SANIA@20.xlsx"),
-        Path(r"C:\Users\Bidyut Paul\Downloads\DocPredic ML\SANIA@20.xlsx"),
+        Path("Data.xlsx"),
+        Path("../Data.xlsx"),
+        Path(r"C:\Users\Bidyut Paul\Downloads\DocPredic ML\Data.xlsx"),
     ]
     
     target_path = None
@@ -560,7 +560,7 @@ def load_raw_data(excel_path: Path = RAW_EXCEL_PATH) -> pd.DataFrame:
             break
             
     if target_path is None:
-        raise FileNotFoundError(f"Could not find dataset SANIA@20.xlsx at specified locations")
+        raise FileNotFoundError(f"Could not find dataset Data.xlsx at specified locations")
         
     df = pd.read_excel(target_path)
     # Clean department trailing whitespace

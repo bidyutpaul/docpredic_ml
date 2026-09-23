@@ -8,7 +8,7 @@ Trains the fused prediction system:
 * P_ML : soft-voting ensemble (LogReg + ComplementNB + calibrated LinearSVC)
          over stacked word + char TF-IDF features.
 * P_KB : IDF-weighted Bernoulli Naive Bayes over the doctor knowledge matrix
-         (SANIA@20.xlsx) with template pseudo-counts (KnowledgeScorer).
+         (Data.xlsx) with template pseudo-counts (KnowledgeScorer).
 * λ    : fusion weight, grid-tuned on validation accuracy (then macro-F1).
 * T    : temperature, fitted on validation NLL (see calibration.py).
 

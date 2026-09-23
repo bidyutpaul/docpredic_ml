@@ -3,7 +3,7 @@ DocPredic Knowledge-Matrix Bayesian Scorer
 ==========================================
 Mathematical core of the high-accuracy pipeline.
 
-Ground truth: the doctor-provided binary symptom matrix (SANIA@20.xlsx),
+Ground truth: the doctor-provided binary symptom matrix (Data.xlsx),
 19 departments x 88 symptoms, M[d, j] = 1 if symptom j is characteristic
 of department d.
 
@@ -51,7 +51,7 @@ from .data_loader import (
 
 # ---------------------------------------------------------------------------
 # Extra colloquial / clinical phrase variants per symptom column.
-# Keys are the exact SANIA@20.xlsx column names (upper-case).
+# Keys are the exact Data.xlsx column names (upper-case).
 # ---------------------------------------------------------------------------
 EXTRA_PHRASES: Dict[str, List[str]] = {
     "FEVER": ["febrile", "running temperature", "burning up", "temperature is high",

@@ -64,7 +64,7 @@ Patients often don't know **which specialist to see**. DocPredic solves that: it
 flowchart LR
     A[📝 Symptom text] --> B[🧹 Preprocessing<br/>+ negation marking]
     B --> C1[📊 ML Ensemble<br/>word + char TF-IDF]
-    B --> C2[📚 Knowledge Scorer<br/>Bayesian KB over SANIA@20]
+    B --> C2[📚 Knowledge Scorer<br/>Bayesian KB over Data.xlsx]
     C1 --> D[⚖️ Log-space fusion<br/>λ·log P_ML + 1-λ·log P_KB]
     C2 --> D
     D --> E[🌡️ Temperature<br/>calibration]
@@ -82,7 +82,7 @@ With **KB-abstention backoff**: when the knowledge base matches no symptoms, fus
 <details>
 <summary><b>🔬 Pipeline stages (click to expand)</b></summary>
 
-1. **Data** — `SANIA@20.xlsx` knowledge matrix (300+ symptom↔department links) → enriched synthetic texts (500/class) + MIMIC-IV ED chief complaints.
+1. **Data** — `Data.xlsx` knowledge matrix (300+ symptom↔department links) → enriched synthetic texts (500/class) + MIMIC-IV ED chief complaints.
 2. **Preprocessing** (`src/preprocessing.py`) — lowercasing, medical synonym normalization, negation marking (`no fever` → `NEG_fever`).
 3. **Features** (`src/models.py`) — stacked word TF-IDF (1–2 grams) + char TF-IDF (3–5 grams) ≈ 10k+ features.
 4. **ML ensemble** — `LogisticRegression + ComplementNB + Calibrated LinearSVC` with tuned vote weights `[0.34, 0.33, 0.33]`.
@@ -145,7 +145,7 @@ Measured on a held-out 15% test split (`docpredic_ml/artifacts/metrics/fused_sys
 ```
 DocPredic ML/
 ├── 📄 interactive.py                 # CLI launcher (root entry point)
-├── 📄 SANIA@20.xlsx                  # Doctor-curated symptom↔department matrix
+├── 📄 Data.xlsx                  # Doctor-curated symptom↔department matrix
 ├── 📁 mimic-iv/                      # MIMIC-IV ED demo dataset (clinical training data)
 ├── 📁 docpredic_ml/
 │   ├── 📄 train_accurate.py          # 🏆 Fused high-accuracy training pipeline
@@ -382,7 +382,7 @@ MIT — see [LICENSE](LICENSE) (or add one). Free for research and educational u
 
 ## 🙏 Acknowledgments
 
-- Doctors behind the **SANIA@20** symptom–department knowledge matrix
+- Doctors behind the **Data.xlsx** symptom–department knowledge matrix
 - **MIMIC-IV ED** (Beth Israel Deaconess / MIT) for real-world emergency data
 - The open-source ML community ❤️
 
