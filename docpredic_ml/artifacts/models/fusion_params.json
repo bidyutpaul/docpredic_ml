@@ -1,0 +1,34 @@
+{
+  "lambda": 1.0,
+  "temperature": 0.5978503734907428,
+  "vote_weights": [
+    0.34,
+    0.33,
+    0.33
+  ],
+  "classes": [
+    "CARDIOLOGY",
+    "DENTISTRY",
+    "DERMATOLOGY",
+    "ENDOCRINOLOGY",
+    "ENT",
+    "GASTROENTEROLOGY",
+    "GENERAL MEDICINE",
+    "GYNECOLOGY & OBSTETRICS",
+    "HEMATOLOGY",
+    "NEPHROLOGY",
+    "NEUROLOGY",
+    "ONCOLOGY",
+    "OPHTHALMOLOGY",
+    "ORTHOPEDICS",
+    "PEDIATRICS",
+    "PSYCHIATRY",
+    "PULMONOLOGY",
+    "RHEUMATOLOGY",
+    "UROLOGY"
+  ],
+  "kb_backoff_no_match": true,
+  "negation_marked": true,
+  "low_confidence_threshold": 0.35,
+  "low_margin_threshold": 0.1
+}

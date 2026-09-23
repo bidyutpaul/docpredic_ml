@@ -1,0 +1,27 @@
+{
+  "best_model": "calibrated_linear_svc",
+  "accuracy": 0.8132295719844358,
+  "f1_macro": 0.772912980477531,
+  "num_classes": 19,
+  "classes": [
+    "CARDIOLOGY",
+    "DENTISTRY",
+    "DERMATOLOGY",
+    "ENDOCRINOLOGY",
+    "ENT",
+    "GASTROENTEROLOGY",
+    "GENERAL MEDICINE",
+    "GYNECOLOGY & OBSTETRICS",
+    "HEMATOLOGY",
+    "NEPHROLOGY",
+    "NEUROLOGY",
+    "ONCOLOGY",
+    "OPHTHALMOLOGY",
+    "ORTHOPEDICS",
+    "PEDIATRICS",
+    "PSYCHIATRY",
+    "PULMONOLOGY",
+    "RHEUMATOLOGY",
+    "UROLOGY"
+  ]
+}
